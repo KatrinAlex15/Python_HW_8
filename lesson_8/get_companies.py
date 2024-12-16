@@ -3,17 +3,17 @@ import requests
 url = "https://ru.yougile.com/api-v2/auth/companies"
 
 creds = {
-    "login": "",
-    "password": ""
+    "login": "alekseeva151283@gmail.com",
+    "password": "15121501Nem"
 }
 
 headers = {
     "Content-Type": "application/json",
     "Accept": "application/json"
 }
-responce = requests.post(url, json=creds, headers=headers)
+response = requests.post(url, json=creds, headers=headers)
 
-companies = responce.json()
+companies = response.json()
 if isinstance(companies, list):
     print("Список компаний: ")
     for company in companies:
